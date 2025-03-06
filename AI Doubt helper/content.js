@@ -397,6 +397,7 @@ async function sendToGemini(userQuestion, problemInfo, chatMessagesElement) {
       3. Once the user has attempted an approach or needs more help, guide them step by step toward an optimal solution.
       4. Only provide the code when the user specifically requests it.
       5. Keep the conversation natural and engaging, using simple and clear explanations.
+      6. Don't answer anything that is not related to the question no matter what.
     `;
     
     const requestBody = {
