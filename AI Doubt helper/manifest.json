@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "AI Doubt Solver",
+  "version": "0.1",
+  "author": "Surender Kumar Mittal",
+  "description": "AI-powered DSA doubt solver for AZ platform problems.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://maang.in/problems/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://maang.in/problems/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/ext-icon.png",
+      "24": "assets/ext-icon.png",
+      "32": "assets/ext-icon.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "AI Doubt Solver"
+  }
+}
